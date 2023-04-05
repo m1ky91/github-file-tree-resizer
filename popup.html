@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub File Tree Resizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body style="background-color: #f2f2f2; width: 250px; height: 100%; padding: 15px;">
+    <form id="form">
+      <div class="form-group">
+        <label for="sidebar-range">File Tree Panel Width</label>
+        <input type="range" class="form-control-range" min="200" max="600" step="1" value="450" id="sidebar-range">
+        <small class="form-text text-muted"><span id="sidebar-value">450px</span></small>
+      </div>
+      <button type="submit" class="btn btn-primary">Resize</button>
+    </form>
+    <script src="popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
