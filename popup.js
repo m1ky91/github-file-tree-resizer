@@ -21,9 +21,11 @@ document.getElementById("form").addEventListener("submit", (event) => {
   const sidebarWidth = sidebarRange.value;
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.executeScript(
-      tabs[0].id,
-      { file: "content.js" },
+    chrome.scripting.executeScript(
+      {
+        target: { tabId: tabs[0].id },
+        files: ["content.js"]
+      },
       () => {
         chrome.tabs.sendMessage(tabs[0].id, {
           command: "modifyMediaQuery",
